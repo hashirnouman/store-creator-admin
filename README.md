@@ -1,25 +1,14 @@
-### Express TypeORM setup Scripts
+### Express Primsa Scripts
 
-##### To make migrations file
-
-```
-yarn run typeorm migration:create  ./migration/EntityFileName
-```
-
-##### For example if Entity file name is User.ts then script will be
+#### To setup prisma
 
 ```
-yarn run typeorm migration:create  ./migration/User
+npx prisma init --datasource-provider sqlite
 ```
 
-##### To run all migrations
+##### To run migration
 
 ```
-yarn run typeorm migration:run  -d  ./config/data-source.ts
+npx prisma migrate dev --name init
 ```
 
-##### To generate migration
-
-```
-yarn run typeorm  -d ./config/data-source.ts migration:generate ./migrations/Shopkeeper
-```
